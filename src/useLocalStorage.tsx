@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 
 // in Typescript type "T" is a generic type 
+// Does the value exist? if it does, update it is what this all does: 
 export function useLocalStorage<T>(key: string, initialValue: T | (() => T)) {
   const [value, setValue] = useState<T>(() => {
     const jsonValue = localStorage.getItem(key)
